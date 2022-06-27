@@ -9,7 +9,7 @@ async function getData(userid){
     const {data:postdata}= await axios("https://jsonplaceholder.typicode.com/posts?userId="+userid);
 
     
-    console.log(usersdata)
-    console.log(postdata)
+    return{usersdata,postdata};
 }
-getData(1)
+let datas = await getData(1)
+console.log(datas)
